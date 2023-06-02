@@ -8,7 +8,7 @@ public class CustomBuildScript
     static void PerformBuild()
     {
         string[] args = System.Environment.GetCommandLineArgs();
-        string buildFilePath = "./FirstBuildZED/BuildCI.exe";
+        string buildFilePath = "./MegaQuantumBuildZEDUNITY/BuildCI.exe";
         for (int i = 0; i < args.Length; i++)
         {
             if (args[i] == "+bfp")
@@ -18,7 +18,7 @@ public class CustomBuildScript
         }
 
         BuildPlayerOptions buildPlayerOptions = new BuildPlayerOptions();
-        buildPlayerOptions.scenes = new[] { "Assets/ZED/Examples/Body Tracking/Scene/BodyTrackingMulti.unity", "Assets/ZED/Examples/Body Tracking/Scene/BodyTrackingSingle.unity", "Assets/ZED/Examples/Point Cloud/PointCloud.unity" };
+        buildPlayerOptions.scenes = new[] { "Assets/ZED/Examples/Body Tracking/Scene/BodyTrackingMulti.unity" };
         buildPlayerOptions.target = BuildTarget.StandaloneWindows64;
         buildPlayerOptions.locationPathName = buildFilePath;
         buildPlayerOptions.options = BuildOptions.CleanBuildCache;
